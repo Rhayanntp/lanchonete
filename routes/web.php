@@ -9,3 +9,6 @@ Route::get('/', function () {
 });
 
 Route::get('/cadastrar/cliente', Create::class);
+Route::get('/cadastrar/produto', Create::class);
+Route::get('/cadastrar/funcionario', Create::class);
+Route::get('/cadastrar/administrador', Create::class);
