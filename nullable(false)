@@ -1,0 +1,24 @@
+
+   UnexpectedValueException 
+
+  Invalid route action: [App\Models\Cliente].
+
+  at vendor\laravel\framework\src\Illuminate\Routing\RouteAction.php:92
+     88▕      */
+     89▕     protected static function makeInvokable($action)
+     90▕     {
+     91▕         if (! method_exists($action, '__invoke')) {
+  ➜  92▕             throw new UnexpectedValueException("Invalid route action: [{$action}].");
+     93▕         }
+     94▕ 
+     95▕         return $action.'@__invoke';
+     96▕     }
+
+  i   `App\Models\Cliente` was not found: Controller class `App\Models\Cliente` for one of your routes was not found. Are you sure this controller exists and is imported correctly? 
+
+  1   vendor\laravel\framework\src\Illuminate\Routing\RouteAction.php:47
+      Illuminate\Routing\RouteAction::makeInvokable("App\Models\Cliente")
+
+  2   vendor\laravel\framework\src\Illuminate\Routing\Route.php:192
+      Illuminate\Routing\RouteAction::parse("cadastro/cliente", ["App\Models\Cliente", "App\Models\Cliente"])
+
